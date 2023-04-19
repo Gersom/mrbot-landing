@@ -1,11 +1,11 @@
 import React from "react";
-import { Gerlogo } from "../components/GerLogo";
+import { GerLogo } from "../components/GerLogo";
 
 export const Header = () => {
   return (
     <div className="header">
       <div className="container header__container">
-        <Gerlogo></Gerlogo>
+        <GerLogo></GerLogo>
 
         <ul className="nav">
           <li className="nav__element" >

@@ -1,0 +1,64 @@
+.time-line
+  margin: 0 auto
+  padding: 50px 0
+  &__title
+    color: #fff
+    font-family: 'Righteous', cursive
+    font-size: 35px
+    font-weight: 400
+    margin: 0 0 40px 0
+    text-align: center
+
+.timeline
+  background: #3D4452
+  border-radius: 10px
+  display: block
+  margin: 0 auto
+  padding: 40px 0
+  width: 70px
+  &__element
+    height: 140px
+    list-style none
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 35px
+    position: relative
+  &__element:nth-child(1)
+    margin-top: 0px
+  &__month
+    color: #fff
+  &__objective
+    position: absolute
+    top: 0
+    right: -33.33%
+    display: flex
+    min-width: 400px
+    border: 2px solid #00B84C
+    border-radius: 10px
+    height: 100%;
+    align-items: center
+    background: rgba(0 , 184 , 76, 0.5);
+    background: linear-gradient(90deg, rgba(0,184,76,0.5) 0%, rgba(61,68,82,0) 100%)
+    & > *
+      width: 33.33%
+  &__element:nth-child(2n)
+    .timeline__objective
+      border: 2px solid #12baf2
+      left: -33.33%
+      right: initial
+      flex-direction: row-reverse
+      background: rgba(18,186,242,0.5);
+      background: linear-gradient(90deg, rgba(61,68,82,0) 0%, rgba(18,186,242,0.5) 100%);
+
+  
+  &__objective:after
+    content: ''
+    width: 1px
+    height: 1px
+  &__paragraph
+    color: #fff
+  &__icon
+    svg
+      height: 100px

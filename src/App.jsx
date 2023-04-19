@@ -1,16 +1,14 @@
-import React from "react";
-
-import { CoverPage } from "./layouts/CoverPage";
-import { Header } from "./layouts/Header";
-
+import React, { Fragment } from "react";
+import { Home } from "./screens/Home";
 import './styles/index.css';
 
 export function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <CoverPage />
-    </div>
+    <Fragment>
+
+      <Home />
+
+    </Fragment>
   );
 }
