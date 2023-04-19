@@ -91,9 +91,12 @@ html {
 .cover-page {
   height: 100%;
   color: #fff;
+  display: flex;
 }
 .cover-page__container {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .cover-page__content {
   padding-right: 270px;
