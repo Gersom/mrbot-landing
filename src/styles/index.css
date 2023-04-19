@@ -17,6 +17,7 @@ html {
   margin: 0 auto;
   max-width: 890px;
   width: 100%;
+  padding: 0 20px;
 }
 .logo {
   display: flex;
@@ -36,6 +37,11 @@ html {
 }
 .logo__color2 {
   color: #12baf2;
+}
+@media screen and (max-width: 600px) {
+  .logo__text {
+    display: none;
+  }
 }
 .ger-button {
   background: #00ace6;
@@ -88,6 +94,17 @@ html {
   width: 60px;
   background: #fff;
 }
+@media screen and (max-width: 600px) {
+  .nav a {
+    width: 50px;
+  }
+  .nav a::before {
+    width: 50px;
+  }
+  .nav__element {
+    margin-left: 15px;
+  }
+}
 .cover-page {
   height: 100%;
   color: #fff;
@@ -130,11 +147,19 @@ html {
 }
 .cover-page__app {
   position: absolute;
-  right: 0;
+  right: 20px;
   width: 250px;
   height: auto;
 }
 .cover-page__app img {
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 600px) {
+  .cover-page__app {
+    display: none;
+  }
+  .cover-page__content {
+    padding-right: 0;
+  }
 }

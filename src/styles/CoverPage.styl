@@ -38,9 +38,16 @@
   
   &__app
     position: absolute
-    right: 0
+    right: 20px
     width: 250px
     height: auto
     img
       width: 100%
       height: auto
+
+@media screen and (max-width: 600px)
+  .cover-page
+    &__app
+      display: none
+    &__content
+      padding-right: 0
