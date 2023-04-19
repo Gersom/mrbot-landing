@@ -1,11 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-export const GerButton = ({}) => {
+export const GerButton = () => {
   return (
-    <Fragment>
-      <button>
-        <span>Registrate</span>
-      </button>
-    </Fragment>
+    <button className="ger-button">
+      <span>Registrate</span>
+    </button>
   )
 }
