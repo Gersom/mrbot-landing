@@ -62,3 +62,36 @@
   &__icon
     svg
       height: 100px
+
+@media screen and (max-width: 700px)
+  .timeline
+    width: 100%
+    background: none
+    position relative
+    &:before
+      content: ""
+      width: 70px
+      height: 100%
+      background: #3D4452
+      position: absolute
+      left: calc(8% - 13px)
+      top: 0
+      border-radius: 10px
+    &__element:nth-child(2n)
+      .timeline__objective
+        right: initial
+        left: initial
+    &__objective
+      position: relative
+      right: initial
+      left: initial
+      flex-direction: row-reverse
+      width: 100%
+      min-width: initial
+    &__month
+      position: absolute
+      left: 8%
+    &__icon svg
+      height: 70px
+    &__paragraph
+      min-width: 100px

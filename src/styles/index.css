@@ -18,7 +18,6 @@ html {
 .container {
   margin: 0 auto;
   max-width: 890px;
-  width: 100%;
   padding: 0 20px;
 }
 .logo {
@@ -70,6 +69,7 @@ html {
 .header__container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .nav {
   margin: 0;
@@ -103,10 +103,10 @@ html {
 }
 @media screen and (max-width: 600px) {
   .nav a {
-    width: 50px;
+    width: initial;
   }
   .nav a::before {
-    width: 50px;
+    width: 100%;
   }
   .nav__element {
     margin-left: 15px;
@@ -240,4 +240,43 @@ html {
 }
 .timeline__icon svg {
   height: 100px;
+}
+@media screen and (max-width: 700px) {
+  .timeline {
+    width: 100%;
+    background: none;
+    position: relative;
+  }
+  .timeline:before {
+    content: "";
+    width: 70px;
+    height: 100%;
+    background: #3d4452;
+    position: absolute;
+    left: calc(8% - 13px);
+    top: 0;
+    border-radius: 10px;
+  }
+  .timeline__element:nth-child(2n) .timeline__objective {
+    right: initial;
+    left: initial;
+  }
+  .timeline__objective {
+    position: relative;
+    right: initial;
+    left: initial;
+    flex-direction: row-reverse;
+    width: 100%;
+    min-width: initial;
+  }
+  .timeline__month {
+    position: absolute;
+    left: 8%;
+  }
+  .timeline__icon svg {
+    height: 70px;
+  }
+  .timeline__paragraph {
+    min-width: 100px;
+  }
 }
