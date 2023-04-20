@@ -26,14 +26,20 @@
 
   a
     text-decoration: none
-    color: #fff
     position: relative
     padding: 10px 0
     width: 60px
     display: block
     text-align: right
     font-size: 14px
+    color: #bcc8df
+    transition: 1s ease all
+    &:hover
+      color: #37d377
+      &::before
+        background: #37d377
     &::before
+      transition: 0.5s ease all
       content: ""
       position: absolute
       bottom: 0
@@ -41,13 +47,22 @@
       height: 2px
       width: 60px
       background: #fff
+  &__register
+    a
+      &:hover
+        color: #12baf2
+        &::before
+          background: #12baf2
 
 @media screen and (max-width: 600px)
   .nav
     a
+      color: #fff
       width: initial
+      transition: none
       &::before
         width: 100%
+        transition: none
      &__element
       margin-left: 15px
       

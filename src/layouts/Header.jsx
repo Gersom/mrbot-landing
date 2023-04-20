@@ -18,7 +18,7 @@ export const Header = () => {
               <span>Ayuda</span>
             </a>
           </li>
-          <li className="nav__element" >
+          <li className="nav__element nav__register" >
             <a href="#a">
               <span>Registro</span>
             </a>
