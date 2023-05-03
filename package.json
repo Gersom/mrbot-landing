@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "stylus:watch": "stylus -I ./node_modules -w ./src -o ./src/styles",
+    "stylus:watch": "stylus -I ./node_modules -w ./src/styles -o ./src/styles",
     "stylus": "stylus -I ./node_modules ./src/styl -o ./src/css"
   },
   "eslintConfig": {

@@ -1,9 +1,16 @@
 import React from "react";
 
-export const GerButton = () => {
+export const GerButton = ({
+  text= 'Ok',
+  small= false
+}) => {
   return (
-    <button className="ger-button">
-      <span>Registrate</span>
+    <button 
+      className={
+        `ger-button ${small ? 'is--small' : ''}`
+      }>
+      
+      <span>{text}</span>
     </button>
   )
 }

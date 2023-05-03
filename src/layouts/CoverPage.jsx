@@ -7,7 +7,7 @@ export const CoverPage = () => {
       <div className="container cover-page__container">
         <div className="cover-page__content">
           <h2 className="cover-page__title">
-            Mr. Bot Tu mejor Aliado en Criptomonedas</h2>
+            Mr. Bot. X Tu mejor Aliado en Criptomonedas</h2>
           <p className="cover-page__description">
             Usa nuestro bot  para generar ganancias muy buenas, despreocupate de los movimientos  tediosos, lo hacemos por usted.
           </p>
@@ -20,7 +20,7 @@ export const CoverPage = () => {
             </a>
           </div>
           <div className="cover-page__register">
-            <GerButton></GerButton>
+            <GerButton text='Registrate' />
           </div>
         </div>
 
