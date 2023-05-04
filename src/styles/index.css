@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
 body,
 html {
   margin: 0;
@@ -165,41 +166,43 @@ html {
   text-align: center;
 }
 .register {
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.register__container {
   background: #333842;
   border-bottom: 3px solid #00ace6;
   border-radius: 10px;
-  border-right: 3px solid #00ace6;
-  border: none;
-  max-width: 860px;
-  margin: 0 20px;
-  padding: 40px 50px;
-  color: #fff;
   box-sizing: border-box;
+  margin: 0 auto 50px auto;
+  max-width: 1024px;
+  padding: 40px 50px;
 }
 .register p,
 .register input {
   font-size: 14px;
 }
 .register__side {
-  margin-left: 40px;
+  width: 50%;
 }
 .register__side:nth-child(1) {
-  margin-left: 0;
+  margin-right: 30px;
 }
 .register__content {
   display: flex;
+  justify-content: space-around;
 }
 .register__title {
   font-size: 40px;
   margin: 0 0 20px 0;
   font-family: 'Righteous', cursive;
   font-weight: 400;
+  text-align: center;
 }
-.register__paragraph {
-  margin: 15px 0 0 0;
-}
+.register__paragraph,
 .register__input {
-  margin-top: 15px;
+  margin: 15px 0 0 0;
 }
 .register__submit {
   margin-top: 40px;
@@ -207,9 +210,15 @@ html {
 @media screen and (max-width: 700px) {
   .register__side {
     margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: initial;
+    width: 100%;
   }
   .register__side:nth-child(1) {
     margin-top: 0;
+    margin-right: auto;
+    max-width: 400px;
   }
   .register__content {
     display: block;
@@ -221,19 +230,47 @@ html {
     margin-top: 20px;
   }
 }
+.register__success {
+  text-align: center;
+  display: none;
+}
+.register__message {
+  font-size: 30px;
+  margin: 100px 0;
+  font-family: 'Righteous', cursive;
+  color: #37d377;
+}
+.register__to-home {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.register.is--registed .register__content,
+.register.is--registed .register__submit {
+  display: none;
+}
+.register.is--registed .register__success {
+  display: block;
+}
+@media screen and (max-width: 700px) {
+  .register.is--registed .register__content {
+    display: none;
+  }
+}
 .ger-button {
   background: #00ace6;
-  border: none;
   border-bottom: 3px solid #80d6f3;
-  border-right: 3px solid #80d6f3;
   border-radius: 10px;
-  height: 60px;
-  font-size: 18px;
-  padding: 0 20px;
-  width: 100%;
-  transition: 0.5s ease background;
+  border-right: 3px solid #80d6f3;
+  border: none;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 60px;
+  padding: 0 20px;
+  transition: 0.5s ease background;
   transition: 0.5s ease color;
+  width: 100%;
 }
 .ger-button:hover {
   color: #fff;
@@ -245,10 +282,14 @@ html {
 .ger-button.is--small {
   height: 46px;
 }
-.ger-input {
+.gerinput {
   width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-.ger-input input {
+.gerinput input {
+  font-family: 'Roboto', sans-serif;
   align-items: center;
   background: #555f73;
   border-radius: 7px;
@@ -261,16 +302,29 @@ html {
   padding: 15px 17px;
   width: 100%;
 }
-.ger-input input:active,
-.ger-input input:focus {
+.gerinput input:active,
+.gerinput input:focus {
   outline: 0;
   border: none;
 }
-.ger-input input:focus::placeholder {
+.gerinput input:focus::placeholder {
   color: #000;
 }
-.ger-input input::placeholder {
+.gerinput input::placeholder {
+  font-style: italic;
   color: rgba(255,255,255,0.5);
+}
+.gerinput__check,
+.gerinput__error {
+  display: none;
+  position: absolute;
+  right: 15px;
+}
+.gerinput.is--verified .gerinput__check {
+  display: flex;
+}
+.gerinput.is--error .gerinput__error {
+  display: flex;
 }
 .logo {
   display: flex;

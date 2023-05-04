@@ -9,17 +9,17 @@ export const Header = () => {
 
         <ul className="nav">
           <li className="nav__element" >
-            <a href="#a">
+            <a href="#timeline">
               <span>Metas</span>
             </a>
           </li>
           <li className="nav__element" >
-            <a href="#a">
+            <a href="#help">
               <span>Ayuda</span>
             </a>
           </li>
           <li className="nav__element nav__register" >
-            <a href="#a">
+            <a href="#register">
               <span>Registro</span>
             </a>
           </li>
