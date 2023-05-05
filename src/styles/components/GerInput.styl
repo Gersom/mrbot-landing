@@ -32,11 +32,30 @@
     display: none
     position: absolute
     right: 15px
+  &__alert
+    display: none
+
+.gerinput.is--verified,
+.gerinput.is--error
+  .gerinput__alert
+    display: inline-block
+    position: absolute
+    left: 0
+    bottom: 0
+    font-size: 12px
+    
 
 .gerinput.is--verified
+  .gerinput__alert
+    color: #00B84C
   .gerinput__check
     display: flex
 
 .gerinput.is--error
+  .gerinput__alert
+    color: #F65858
   .gerinput__error
     display: flex
+
+.gerinput.is--alert
+  padding-bottom: 20px

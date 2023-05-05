@@ -5,6 +5,16 @@ import { GerButton } from "../components/GerButton";
 export const Register = () => {
   const [registed, setRegisted] = useState(false)
 
+  const [codeStatus, setCodeStatus] = useState(2)
+  const [codeAlert, setCodeAlert] = useState('')
+  
+  const [referenceStatus, setReferenceStatus] = useState(2)
+  const [referenceAlert, setReferenceAlert] = useState('')
+
+  const [email, setEmail] = useState('')
+  const [emailStatus, setEmailStatus] = useState(2)
+  const [emailAlert, setEmailAlert] = useState('')
+  
   const submit = () => {
     setInterval(() => {
       console.log('funciona :v')
@@ -14,6 +24,51 @@ export const Register = () => {
 
   const toHome = () => {
     window.location.href='#'
+  }
+
+  const verifyCode= (val) => {
+    if (val === '') {
+      setCodeStatus(2)
+      setCodeAlert('')
+      return null
+    }
+    if (val.length === 6) {
+      setCodeStatus(0)
+      setCodeAlert('Código válido')
+    } else {
+      setCodeStatus(1)
+      setCodeAlert('')
+    }
+  }
+  const verifyReference = (val) => {
+    if (val === '') {
+      setReferenceStatus(2)
+      setReferenceAlert('')
+      return null
+    }
+    if (val.length === 6) {
+      setReferenceStatus(0)
+      setReferenceAlert('Código válido')
+    } else {
+      setReferenceStatus(1)
+      setReferenceAlert('Código invalido')
+    }
+  }
+  const verifyEmail = (val) => {
+    if (val === '') {
+      setEmailStatus(2)
+      setEmailAlert('')
+      return null
+    }
+  }
+  const sendEmail = () => {
+    if (email === 'gersom@gmail.com') {
+      setEmailStatus(1)
+      setEmailAlert('Correo eléctonico ya esta registrado')
+    } else {
+      setEmailStatus(2)
+      setEmailAlert('')
+    }
   }
 
   return (
@@ -31,11 +86,17 @@ export const Register = () => {
 
         <div className="register__input">
           <GerInput
+            verify={true}
+            onChange={event => setEmail(event.target.value)}
+            onVerify={verifyEmail}
+            status={emailStatus}
+            alert={emailAlert}
             plholder='E-mail' /></div>
 
         <div className="register__input">
           <GerButton
             small={true}
+            onClick={sendEmail}
             text='Enviar código' /></div>
           
         <p className="register__paragraph">
@@ -43,6 +104,10 @@ export const Register = () => {
 
         <div className="register__input">
           <GerInput
+            verify={true}
+            onVerify={verifyCode}
+            status={codeStatus}
+            alert={codeAlert}
             plholder='Código de verificación' />
         </div>
       </div>
@@ -53,6 +118,10 @@ export const Register = () => {
         
         <div className="register__input">
           <GerInput
+            verify={true}
+            onVerify={verifyReference}
+            status={referenceStatus}
+            alert={referenceAlert}
             plholder='Código referido' /></div>
 
         <div className="register__input">
