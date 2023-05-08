@@ -258,10 +258,10 @@ html {
 }
 .ger-button {
   background: #00ace6;
-  border-bottom: 3px solid #80d6f3;
-  border-radius: 10px;
-  border-right: 3px solid #80d6f3;
   border: none;
+  border-bottom: 3px solid #7fd5f2;
+  border-radius: 10px;
+  border-right: 3px solid #7fd5f2;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
